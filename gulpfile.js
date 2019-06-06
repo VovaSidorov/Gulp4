@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 
 const cssFiles=[
+    './node_modules/normalize.css/normalize.css',
     './src/css/some.css',
     './src/css/other.css',
 ]
