@@ -8,6 +8,8 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1"
   },
   "scripts": {

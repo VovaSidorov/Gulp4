@@ -1,5 +1,7 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
 
 const cssFiles=[
     './node_modules/normalize.css/normalize.css',
@@ -9,8 +11,14 @@ const cssFiles=[
 
 function styles(){
     return gulp.src(cssFiles)
-    // return gulp.src('./src/css/**/*.css')
         .pipe(concat('all.css'))
+        .pipe(autoprefixer({
+            browsers: ['>0.1%'],
+            cascade: false
+    }))
+        .pipe(cleanCSS({
+                level:2
+            }))
         .pipe(gulp.dest('./build/css'));
 }
 
